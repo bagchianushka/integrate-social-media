@@ -54,7 +54,7 @@ public class a2 extends AppCompatActivity {
             Uri personPhoto = acct.getPhotoUrl();
             tf1.setText(personName);
             tf2.setText(personEmail);
-            IMG.setImageResource(R.drawable.ii);
+            
         }
     }
     private void signOut() {
