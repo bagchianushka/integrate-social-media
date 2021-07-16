@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalfb"
+    tools:context=".a2">
+
+    <TextView
+        android:id="@+id/tf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tf1"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-2dp"
+        android:fontFamily="@font/agilia"
+        android:hint="email"
+        android:padding="10dp"
+        android:text=""
+
+        android:textColor="#fffafa"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tf2"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="false"
+        android:text="signout"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <ImageView
+        android:id="@+id/IMG"
+        android:layout_width="190dp"
+        android:layout_height="220dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tf1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/IMG"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/agilia"
+        android:hint="Name"
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#fffafa"
+        />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/IMG"
+        android:background="?android:attr/listDivider" />
+
+</RelativeLayout>
