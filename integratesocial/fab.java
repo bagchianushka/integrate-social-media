@@ -41,7 +41,7 @@ public class fab extends AppCompatActivity {
 
         callback_manager= CallbackManager.Factory.create();
 
-        login_button.setPermissions(Arrays.asList("email","user_birthday"));
+        login_button.setPermissions(Arrays.asList("email","public_profile"));
 
         login_button.registerCallback(callback_manager, new FacebookCallback<LoginResult>() {
             @Override
@@ -86,9 +86,12 @@ public class fab extends AppCompatActivity {
             @Override
             public void onCompleted(JSONObject object, GraphResponse response) {
                 if(object!=null) {
-                    TF1.setText("anushkariser@gmail.com");
-                    TF2.setText("Anushka Bagchi");
-                    img.setImageResource(R.drawable.profile_pic_fb);
+                    String email=object.getString("email");
+                    String name=object.getString("name");
+                    TF1.setText(name);
+                    TF2.setText(email);
+                    String img_url="https://graph.facebook.com/"+loginResult.getAccessToken().getUserId()+"/picture?return_ssl_resources=1";
+                Picasso.get().load(img_url);
                 }
             }
         });
